@@ -1,0 +1,20 @@
+﻿<Window x:Class="WPFPsi.CropWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:draw="clr-namespace:Drawing"
+    Title="CropWindow" Height="512" Width="640" WindowStartupLocation="CenterOwner"
+        WindowStyle="ToolWindow" Loaded="Window_Loaded" ResizeMode="NoResize">
+    <DockPanel LastChildFill="True" x:Name="rootPanel">
+        <ToolBar DockPanel.Dock="Top">
+            <ToggleButton Template="{StaticResource btnCut}" x:Name="cropBtn" Width="60" Height="30"></ToggleButton>
+            <Button Template="{StaticResource btnCommit}" x:Name="btnOK" Click="btnOK_Click" Width="60" Height="30"></Button>
+            <Button Template="{StaticResource btnCancel}" x:Name="btnCancel" Click="btnCancel_Click" Width="60" Height="30"></Button>
+            <Button Template="{StaticResource btnTransfer}" Click="Button_Click" Width="70" Height="30"></Button>
+        </ToolBar>        
+        <draw:DrawingCanvas x:Name="Canvas" Background="White"
+                            MouseLeftButtonDown="Canvas_MouseLeftButtonDown"
+                            MouseMove="Canvas_MouseMove"
+                            MouseLeftButtonUp="Canvas_MouseLeftButtonUp" />
+               
+    </DockPanel>
+</Window>

@@ -1,0 +1,22 @@
+﻿<Window x:Class="Autoprofile.Analysis_Window"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Analysis_Window" Height="512" Width="640" Loaded="Window_Loaded"
+        WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner" Closing="Window_Closing">
+    <DockPanel LastChildFill="True">
+        <TextBlock DockPanel.Dock="Top" Text="Анализът приключи." TextAlignment="Center"  FontFamily="Monotype Corsiva" FontSize="24" />
+        <Button DockPanel.Dock="Bottom" Click="Button_Click" Width="140" HorizontalAlignment="Center" FontFamily="Monotype Corsiva" FontSize="24" FontWeight="Bold">Принтиране</Button>
+        <Button DockPanel.Dock="Bottom" Click="Button_Click_1" Width="140" HorizontalAlignment="Center" FontFamily="Monotype Corsiva" FontSize="24" FontWeight="Bold" Margin="0,0,0,5">Запази</Button>
+        <FlowDocumentScrollViewer Name="docViewer">
+            <FlowDocument>
+                <Paragraph x:Name="report">
+                    <Floater Width="200">
+                        <BlockUIContainer>
+                            <Image x:Name="analysed_image" />
+                        </BlockUIContainer>
+                    </Floater>
+                </Paragraph>
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+    </DockPanel>
+</Window>

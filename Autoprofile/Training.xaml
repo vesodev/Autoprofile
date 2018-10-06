@@ -1,0 +1,28 @@
+﻿<Page x:Class="Autoprofile.Training"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Training">
+    <FlowDocumentScrollViewer>
+        <FlowDocument>
+            <Paragraph>
+                1.	Вмъквате снимката, която ще анализирате от бутона долу в ляво (вмъкване на снимка). На прозореца се зарежда избраната снимка. Очертайте рамка около лицето. Изберете бутона ОК и изображението се изрязва. Ако сте доволни от изрязването кликнете върху бутона Прехвърли.
+                <Floater>
+                    <BlockUIContainer>
+                        <Image Source="crop.jpg" />
+                    </BlockUIContainer>
+                </Floater>
+            </Paragraph>
+            <Paragraph>
+                2.	От менюто, представляващо лице на блондинка изберете частите от лицето(нос, очи, устни, вежди и вдлъбнатината между устните и носа).
+                <Floater>
+                    <BlockUIContainer>
+                        <Image Source="comp.jpg" />
+                    </BlockUIContainer>
+                </Floater>
+            </Paragraph>
+            <Paragraph>
+                3. След направения подбор на всички елементи бутонът ОК става активен и след натискане извежда резултата от анализа.
+            </Paragraph>
+        </FlowDocument>
+    </FlowDocumentScrollViewer>
+</Page>

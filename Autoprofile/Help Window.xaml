@@ -1,0 +1,15 @@
+﻿<Page x:Class="Autoprofile.Help_Window"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Помощен Център">
+    <FlowDocumentScrollViewer>
+        <FlowDocument>
+            <Paragraph>
+                Добре дошли в помощния център на "Психологически Autoprofile". Тук ще намерите информация за работа с програмата, както и кратка информация за създателите й. 
+            </Paragraph>
+            <Paragraph xml:space="preserve">
+              <Hyperlink NavigateUri="Training.xaml">Обучение</Hyperlink>                                             <Hyperlink NavigateUri="About.xaml">За създателите</Hyperlink>
+            </Paragraph>
+        </FlowDocument>
+    </FlowDocumentScrollViewer>
+</Page>

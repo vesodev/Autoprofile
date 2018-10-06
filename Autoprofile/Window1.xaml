@@ -1,0 +1,269 @@
+﻿<Window x:Class="WPFPsi.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:draw="clr-namespace:Drawing"
+    Title="Autoprofile" Height="600" Width="800" WindowStartupLocation="CenterScreen" 
+        WindowStyle="None" WindowState="Normal" AllowsTransparency="True" SizeToContent="Manual" ResizeMode="CanMinimize">
+    <DockPanel Margin="43,10,42,12" Background="Transparent">
+        <Canvas DockPanel.Dock="Top" Background="Transparent" Height="30" MouseLeftButtonDown="Canvas_MouseLeftButtonDown">
+            <Button Template="{StaticResource btnExit}" Canvas.Right="0" Width="37.6" Height="19.992" Canvas.Top="0" Click="MenuItem_Click" ToolTip="Изход" />
+            <Button Template="{StaticResource btnMinimize}" Canvas.Right="36.4" Width="36.8" Height="19.992" Canvas.Top="0" Click="Button_Click_1" ToolTip="Минимизиране" />
+            <TextBlock Canvas.Left="3.636" Text="Психологически Autoprofile" Height="16" Canvas.Top="2" Width="220" Foreground="AntiqueWhite" FontFamily="Monotype Corsiva" FontSize="20" TextAlignment="Center" />
+        </Canvas>
+        <Canvas DockPanel.Dock="Bottom" Background="Transparent" Height="30">
+            <Button Template="{StaticResource btnOK}" Canvas.Left="305" Width="60" Height="20" Canvas.Top="6.4" Click="Button_Click" ToolTip="Щракнете, за да анализирате" IsEnabled="False" x:Name="OKBtn" />
+            <Button Template="{StaticResource btnImport}" Canvas.Left="250" Width="55" Height="20" Canvas.Top="6.4" Click="OpenImage_Click" ToolTip="Вмъкване на снимка" />
+            <Button Template="{StaticResource btnHelp}" Canvas.Left="364" Width="55" Height="20" Canvas.Top="6.4" Click="HelpAbout_Click" ToolTip="Помощ" />
+        </Canvas>
+        <Grid DockPanel.Dock="Left" Name="anim_grid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="168*" />
+                <ColumnDefinition Width="450*" />
+            </Grid.ColumnDefinitions>
+            <GridSplitter Grid.Column="0" Width="5" Background="Black" />            
+            <ScrollViewer>                
+                <StackPanel Grid.Column="0" VerticalAlignment="Stretch" x:Name="infoPanel">
+                    <Canvas Width="170" Height="168">
+                        <Image Grid.Column="0" Source="3d-head_tr.gif" Width="170" Height="168" />
+                        <Ellipse Height="12.024" Name="ellipse1" Stroke="Transparent" Width="30.015" Canvas.Left="44.022" Canvas.Top="72.979" Opacity="0" Fill="Yellow" Cursor="Hand" MouseDown="ellipse1_MouseDown" />
+                        <Ellipse Canvas.Left="99.383" Canvas.Top="72.979" Height="12.935" Name="ellipse2" Stroke="Transparent" Width="26.68" Fill="Yellow" Opacity="0" Cursor="Hand" MouseDown="ellipse1_MouseDown" />
+                        <Ellipse Canvas.Left="58.696" Canvas.Top="128.75" Height="14" Name="ellipse3" Stroke="Transparent" Width="56.028" Fill="Yellow" Opacity="0" Cursor="Hand" MouseDown="ellipse3_MouseDown" />
+                        <Ellipse Canvas.Left="44.022" Canvas.Top="58.029" Height="9.018" Name="ellipse4" Stroke="Transparent" Width="30.015" Fill="Yellow" Opacity="0" Cursor="Hand" MouseDown="ellipse5_MouseDown" />
+                        <Ellipse Canvas.Left="99.383" Canvas.Top="58.029" Height="9.018" Name="ellipse5" Stroke="Transparent" Width="26.68" Fill="Yellow" Opacity="0" Cursor="Hand" MouseDown="ellipse5_MouseDown" />
+                        <Ellipse Canvas.Left="77.372" Canvas.Top="70.263" Height="44.75" Name="ellipse6" Stroke="Transparent" Width="16.008" Fill="Yellow" Opacity="0" Cursor="Hand" MouseDown="ellipse6_MouseDown" />
+                        <Ellipse Canvas.Left="71.25" Canvas.Top="119" Cursor="Hand" Fill="Yellow" Height="7.75" Name="ellipse7" Opacity="0" Stroke="Transparent" Width="29" MouseDown="ellipse7_MouseDown" />
+                    </Canvas>
+                    <Expander Header="Очи" Visibility="Collapsed" Name="expEyes">
+                        <ListView Height="Auto" SelectionChanged="ListView_SelectionChanged" Name="lstViewEyes" Tag="Eyes" Background="Transparent" >
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyes/22.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyes/23.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyes/24.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyes/26.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyes/27.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyes/28.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyes/29.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyes/30.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyes/31.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyes/32.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyes/33.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyes/34.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyes/35.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyes/36.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyes/37.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyes/38.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyes/39.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyes/40.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyes/41.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyes/42.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyes/43.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyes/44.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyes/47.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyes/48.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyes/49.gif" Width="146" Height="100" />
+                            </ListViewItem>                            
+                        </ListView>
+                    </Expander>
+                    <Expander Header="Вежди" Visibility="Collapsed" Name="expEyebrows">
+                        <ListView x:Name="lstViewEyebrows" SelectionChanged="lstViewEyebrows_SelectionChanged" Tag="Eyebrows" Background="Transparent">
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyebrows/11.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyebrows/12.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyebrows/13.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyebrows/14.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyebrows/15.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyebrows/16.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyebrows/17.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyebrows/18.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Eyebrows/19.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                        </ListView>
+                    </Expander>
+                    <Expander Header="Носове" Visibility="Collapsed" Name="expNose">
+                        <ListView x:Name="lstViewNose" SelectionChanged="lstViewNose_SelectionChanged" Tag="Nose" Background="Transparent">
+                            <ListViewItem>
+                                <Image Source="FaceElements/Nose/50.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Nose/53.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Nose/54.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Nose/55.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Nose/57.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Nose/65.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Nose/67.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Nose/68.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Nose/69.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                        </ListView>
+                    </Expander>
+                    <Expander Header="Устни" Visibility="Collapsed" Name="expLips">
+                        <ListView x:Name="lstViewLips" SelectionChanged="lstViewLips_SelectionChanged" Tag="Lips" Background="Transparent">
+                            <ListViewItem>
+                                <Image Source="FaceElements/Lips/70.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Lips/71.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Lips/72.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Lips/73.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Lips/76.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Lips/77.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Lips/78.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Lips/79.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <Image Source="FaceElements/Lips/80.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                        </ListView>
+                    </Expander>
+                    <Expander Header="Вдлъбнатини" Visibility="Collapsed" Name="expVdl">
+                        <ListView x:Name="lstViewVdl" SelectionChanged="lstViewVdl_SelectionChanged" Tag="Vdl" Background="Transparent">
+                            <ListViewItem Margin="0,0,0,10" >
+                                <Image Source="FaceElements/Vdlabnatini/93.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem Margin="0,0,0,10">
+                                <Image Source="FaceElements/Vdlabnatini/94.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem Margin="0,0,0,10">
+                                <Image Source="FaceElements/Vdlabnatini/95.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem Margin="0,0,0,10">
+                                <Image Source="FaceElements/Vdlabnatini/96.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem Margin="0,0,0,10">
+                                <Image Source="FaceElements/Vdlabnatini/97.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                            <ListViewItem Margin="0,0,0,10">
+                                <Image Source="FaceElements/Vdlabnatini/98.gif" Width="146" Height="100" />
+                            </ListViewItem>
+                        </ListView>
+                    </Expander>
+                </StackPanel>
+            </ScrollViewer>
+            <Border Grid.Column="1" Margin="3" BorderBrush="Transparent" BorderThickness="1">
+                <draw:DrawingCanvas x:Name="drawingSurface" ClipToBounds="True" Background="Transparent" 
+                                MouseLeftButtonDown="DrawingCanvas_MouseLeftButtonDown"
+                                MouseMove="DrawingCanvas_MouseMove"
+                                MouseLeftButtonUp="DrawingCanvas_MouseLeftButtonUp" HorizontalAlignment="Stretch" Opacity="0.0">
+                </draw:DrawingCanvas>
+            </Border>
+            <Grid.Background>
+                <RadialGradientBrush RadiusX="1" RadiusY="1" GradientOrigin="0.0, 0.0">
+                    <GradientStop Color="White" Offset="0"></GradientStop>
+                    <GradientStop Color="Blue" Offset="1"></GradientStop>
+                </RadialGradientBrush>
+            </Grid.Background>
+        </Grid>
+    </DockPanel>
+    <Window.Background>
+        <ImageBrush ImageSource="Projects_design3.gif" />
+    </Window.Background>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <EventTrigger.Actions>
+                <BeginStoryboard>
+                    <Storyboard>
+                        <PointAnimationUsingKeyFrames Storyboard.TargetName="anim_grid"
+                                                      Storyboard.TargetProperty="Background.GradientOrigin"
+                                                      RepeatBehavior="Forever">
+                            <LinearPointKeyFrame Value="0,0" KeyTime="0:0:0" />
+                            <LinearPointKeyFrame Value="0,1" KeyTime="0:0:2" />
+                            <LinearPointKeyFrame Value="1,1" KeyTime="0:0:4" />
+                            <LinearPointKeyFrame Value="1,0" KeyTime="0:0:6" />
+                            <LinearPointKeyFrame Value="0,0" KeyTime="0:0:8" />
+                        </PointAnimationUsingKeyFrames>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </Window.Triggers>
+</Window>

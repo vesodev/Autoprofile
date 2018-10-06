@@ -1,0 +1,21 @@
+﻿<Page x:Class="Autoprofile.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="За авторите">
+    <FlowDocumentScrollViewer>
+        <FlowDocument>
+            <Paragraph>
+                Веселин Иванов - ученик от 11 клас в СОУ"Отец Паисий" - гр.Кърджали. Автор - създал програмния код.
+            </Paragraph>
+            <Paragraph>
+                Занимавам се с програмиране от 2 години, владея два програмни езика: C# и C++. В момента се занимавам активно и с математика, участвам в олимпиади и конкурси.
+            </Paragraph>
+            <Paragraph>
+                Венцислав Димитров - ученик от 11 клас в СОУ"Отец Паисий" - гр.Кърджали. Съавтор - дизайнер на програмата.
+            </Paragraph>
+            <Paragraph>
+                Муса Муса - учител по Информатика и ИТ в СОУ"Отец Паисий". Ръководител на проекта.
+            </Paragraph>
+        </FlowDocument>
+    </FlowDocumentScrollViewer>
+</Page>
